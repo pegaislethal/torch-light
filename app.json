@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "torchlight",
-    "slug": "torchlight",
+    "slug": "torchlight-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.pega123.torchlight"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +32,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cf611d5e-1bec-4ecf-8147-d7c9f4382ea4"
+      }
+    },
+    "owner": "pega123"
   }
 }
