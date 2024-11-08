@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import { StyleSheet, Platform, View, Button, Text, Alert } from "react-native";
+import {
+  StyleSheet,
+  Platform,
+  View,
+  Button,
+  Text,
+  Alert,
+  Pressable,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Torch from "react-native-torch";
-import 'react-native-gesture-handler';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useNavigation, DrawerActions } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function HomeScreen() {
   const [isTorchOn, setIsTorchOn] = useState(false);
+  const navigation = useNavigation();
 
   const handleTorchToggle = async () => {
     try {
@@ -37,16 +47,22 @@ export default function HomeScreen() {
     }
   };
 
-
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Torchly</Text>
         </View>
-        <View style={{ marginRight: "-60%", marginTop: "-15%" }}>
-          
+        <View style={{ marginRight: "-70%", marginTop: "-5%" }}>
+          <Pressable
+            onPress={() =>
+              console.log("Pressed") 
+                
+
+            }
+          >
+            <Ionicons name="menu" size={20} color="white" />
+          </Pressable>
         </View>
         <View style={styles.button}>
           <Button
@@ -63,22 +79,24 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#000",
+    flex: 1,
   },
   header: {
     width: "100%",
-    height: 90,
+    marginTop: "-120%",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#000",
   },
   title: {
-    fontSize: 24,
+    fontSize: 14,
     color: "#D3CBCB",
   },
   button: {
     width: "auto",
     height: 50,
-    marginTop: "80%",
+    marginTop: "50%",
     justifyContent: "center",
   },
 });
