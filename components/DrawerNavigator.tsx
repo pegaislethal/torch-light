@@ -7,12 +7,11 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 export default function MenuDrawer() {
   const Drawer = createDrawerNavigator();
   return (
-    <NavigationContainer>
       <Drawer.Navigator>
       <Drawer.Screen name="About" component={AboutScreen} />
-      <Drawer.Screen name="General" component={GeneralScreen} />
+      <Drawer.Screen name="General" component={GeneralScreen} 
+      />
     </Drawer.Navigator>
-    </NavigationContainer>
   );
 }
 
