@@ -11,13 +11,11 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Torch from "react-native-torch";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useNavigation, DrawerActions } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import DrawerNavigator from "@/components/DrawerNavigator";
+
 export default function HomeScreen() {
   const [isTorchOn, setIsTorchOn] = useState(false);
-  const navigation = useNavigation();
 
   const handleTorchToggle = async () => {
     try {
@@ -48,12 +46,7 @@ export default function HomeScreen() {
     }
   };
 
- const drawer = () => {
-    const navigatio = useNavigation();
-    const onToggleDrawer = () => {
-      navigatio.dispatch(DrawerActions.toggleDrawer());
-      };
- }
+
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -62,12 +55,7 @@ export default function HomeScreen() {
           <Text style={styles.title}>Torchly</Text>
         </View>
         <View style={{ marginRight: "-70%", marginTop: "-5%" }}>
-          <TouchableOpacity onPress={()=>{
-            drawer();
-          }}></TouchableOpacity>
-          <Ionicons name="menu" size={20} color="white">
-            <DrawerNavigator />
-          </Ionicons>
+          
         </View>
         <View style={styles.button}>
           <Button
