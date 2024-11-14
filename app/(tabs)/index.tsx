@@ -6,13 +6,9 @@ import {
   Button,
   Text,
   Alert,
-  Pressable,
-  TouchableOpacity,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Torch from "react-native-torch";
-import { useNavigation, DrawerActions } from "@react-navigation/native";
-import { Ionicons } from "@expo/vector-icons";
 
 export default function HomeScreen() {
   const [isTorchOn, setIsTorchOn] = useState(false);
@@ -46,17 +42,13 @@ export default function HomeScreen() {
     }
   };
 
-
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Torchly</Text>
         </View>
-        <View style={{ marginRight: "-70%", marginTop: "-5%" }}>
-          
-        </View>
+
         <View style={styles.button}>
           <Button
             title={isTorchOn ? "Turn Off" : "Turn On"}

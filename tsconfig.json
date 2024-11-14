@@ -17,5 +17,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "app/(tabs)/about.js", "app/(tabs)/index.tsx", "components/navigation/App.Navigation.js", "app/_layout.tsx"  ]
+, "app/(tabs)/about.js", "app/(tabs)/index.tsx", "components/navigation/App.Navigation.js", "app/_layout.tsx", "app/(tabs)/_layout.tsx"  ]
 }
